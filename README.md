@@ -58,3 +58,10 @@ should be stored as a repository secret:
 4. set the name to `STORE_LOGIN` (or whatever is referenced in the workflow), and paste the contents of `exported.txt` as the value.
 
 ![Screenshot depicting secrets configuration](add-secret.jpg)
+
+# Other Snapcraft actions
+
+The Snapcraft community has created other actions that may be useful for Snap Packagers:
+
+* [Snapcraft Build Action](jhenstridge/snapcraft-build-action)
+* [Snapcraft Review Action](https://github.com/diddlesnaps/snapcraft-review-action)
