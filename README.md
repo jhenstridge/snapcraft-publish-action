@@ -63,5 +63,5 @@ should be stored as a repository secret:
 
 The Snapcraft community has created other actions that may be useful for Snap Packagers:
 
-* [Snapcraft Build Action](jhenstridge/snapcraft-build-action)
+* [Snapcraft Build Action](https://github.com/jhenstridge/snapcraft-build-action)
 * [Snapcraft Review Action](https://github.com/diddlesnaps/snapcraft-review-action)
