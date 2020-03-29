@@ -977,12 +977,15 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const loginData = core.getInput('store_login');
-            const snapFile = core.getInput('snap');
+            const snapFiles = core.getInput('snap').split(':');
             const release = core.getInput('release');
-            core.info(`Publishing snap "${snapFile}"...`);
-            const publisher = new publish_1.SnapcraftPublisher(loginData, snapFile, release);
-            yield publisher.validate();
-            yield publisher.publish();
+            for (let snap of snapFiles) {
+                snap = snap.trim();
+                core.info(`Publishing snap "${snap}"...`);
+                const publisher = new publish_1.SnapcraftPublisher(loginData, snap, release);
+                yield publisher.validate();
+                yield publisher.publish();
+            }
         }
         catch (error) {
             core.setFailed(error.message);
